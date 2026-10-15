@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chia · Dog health</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">🐾</span> Chia</div>
+    <nav class="dogs" id="dogSwitcher" aria-label="Dogs"></nav>
+    <div class="top-actions">
+      <span class="badge" id="aiBadge">AI: …</span>
+      <button class="ghost small" id="resetBtn" title="Restore the sample dogs">Reset demo data</button>
+    </div>
+  </header>
+
+  <main id="app">
+    <section class="hero" id="hero"></section>
+
+    <nav class="tabs" role="tablist">
+      <button role="tab" data-tab="overview" class="active">Overview</button>
+      <button role="tab" data-tab="checkin">Daily check-in</button>
+      <button role="tab" data-tab="assistant">Ask Chia</button>
+      <button role="tab" data-tab="records">Records</button>
+      <button role="tab" data-tab="profile">Profile</button>
+    </nav>
+
+    <section class="tab-panel" id="tab-overview"></section>
+    <section class="tab-panel" id="tab-checkin" hidden></section>
+    <section class="tab-panel" id="tab-assistant" hidden>
+      <div class="card chat-card">
+        <div class="chat" id="chat"></div>
+        <div class="suggestions" id="suggestions"></div>
+        <form class="chat-form" id="chatForm">
+          <input id="chatInput" autocomplete="off" placeholder="Ask about symptoms, results, food…" maxlength="2000">
+          <button class="primary" type="submit">Send</button>
+        </form>
+        <p class="fineprint">Chia explains and advises. It doesn't diagnose or prescribe, and it always points you to a real vet.</p>
+      </div>
+    </section>
+    <section class="tab-panel" id="tab-records" hidden></section>
+    <section class="tab-panel" id="tab-profile" hidden></section>
+  </main>
+
+  <div class="tooltip" id="tooltip" hidden></div>
+  <div class="toast" id="toast" hidden></div>
+
+  <footer class="footer">Demo only. All dogs, clinics and values are made up. Thresholds are illustrative and need vet review.</footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

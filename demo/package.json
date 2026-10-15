@@ -1,0 +1,16 @@
+{
+  "name": "chia-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chia: a dog's health record, daily check-in, early-warning signals and an AI health assistant (proof of concept).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.134.0"
+  }
+}
